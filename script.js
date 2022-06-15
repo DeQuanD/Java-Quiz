@@ -15,29 +15,29 @@ var answerBtnEl = document.querySelector('.answerbtn')
 
 var questionSet = [
     {
-      question: 'Question one',
+      question: 'What type of programming language is Javascript?',
       answers:  [
-       "choice a",
-        "choice b",
-        "choice c",
+       "Procedural Programming Language",
+        "Functional Programming Language",
+        "Object-Oriented Programming Language",
       ],
       correct: "C"
     },
     {
-        question: 'Question two',
+        question: 'What Keyword is Used to Declare a Function?',
         answers:  [
-          "choice d",
-          "choice e",
-         "choice f",
+          "def",
+          "function",
+         "f",
         ],
         correct: "b"
     },
      {
-        question: 'Question three',
+        question: 'Which Primitive value is NOT a Data Type in Javascript?',
         answers:  [
-         "choice g",
-         "choice h",
-         "choice i",
+         "Tuple",
+         "Boolean",
+         "String",
         ],
         correct: "a"
     },    
@@ -69,6 +69,7 @@ function setTimer(){
     } 
         if(initTime === 0 || initTime < 0){
             clearInterval(timer)
+            timeEl.textContent = 'Sorry, Out of Time!'
             console.log("you lose")
         }
         
@@ -91,7 +92,7 @@ function renderAnswers(){
     
     if(a < questionSet.length){
        var answerText = questionSet[a].answers
-    answrEl.textContent = answerText
+    //answrEl.textContent = answerText
    // console.log('answerset ' + a)}
 
     for (var i = 0; i < questionLength; i++){
